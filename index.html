@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="往常近义词大全：提供“往常”的同义词、反义词及常用替换词，包含详细解释和用法示例，帮助用户在写作和表达中更精准地使用词汇。">
+    <meta name="keywords" content="往常,近义词,词语替换,同义词大全,中文词汇">
+    <title>往常近义词 - 同义词大全与词语替换指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #3b82f6;
+            --primary-dark: #2563eb;
+            --secondary-color: #64748b;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-light: #64748b;
+            --border-color: #e2e8f0;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --radius: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Main Container */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: var(--radius);
+            text-align: center;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .hero-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero-section p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Content */
+        .content-area {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        section {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--bg-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h2::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 1.5rem;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        /* Synonym List */
+        .synonym-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .synonym-tag {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: 500;
+        }
+
+        .synonym-tag:hover {
+            border-color: var(--primary-color);
+            background-color: #eff6ff;
+            color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .synonym-tag .usage-hint {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin-top: 0.25rem;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+
+        .comparison-table th, .comparison-table td {
+            text-align: left;
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .comparison-table th {
+            background-color: var(--bg-color);
+            color: var(--text-light);
+            font-weight: 600;
+            width: 20%;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:hover td {
+            background-color: #f8fafc;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .widget {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .widget h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .category-list {
+            list-style: none;
+        }
+
+        .category-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .category-list a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .category-list a:hover {
+            color: var(--primary-color);
+        }
+
+        .usage-examples {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #f0f9ff;
+            border-left: 3px solid var(--primary-color);
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+
+        .usage-examples p {
+            font-size: 0.9rem;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .usage-examples strong {
+            color: var(--primary-dark);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 1.5rem;
+            margin-top: 3rem;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-section {
+                padding: 2rem 1rem;
+            }
+
+            .hero-section h1 {
+                font-size: 1.8rem;
+            }
+
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav a {
+                margin: 0 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                <span>词语通</span>
+            </a>
+            <nav>
+                <a href="#">首页</a>
+                <a href="#">同义词</a>
+                <a href="#">反义词</a>
+                <a href="#">成语大全</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h1>往常</h1>
+            <p>查找“往常”的同义词、反义词及详细解释，助您精准表达。</p>
+        </section>
+
+        <!-- Main Content Area -->
+        <div class="content-area">
+            
+            <!-- Synonyms Section -->
+            <section>
+                <h2>常用同义词</h2>
+                <div class="synonym-grid">
+                    <div class="synonym-tag">
+                        向来
+                        <span class="usage-hint">多指时间或行为习惯</span>
+                    </div>
+                    <div class="synonym-tag">
+                        平素
+                        <span class="usage-hint">指平时，通常情况</span>
+                    </div>
+                    <div class="synonym-tag">
+                        往日
+                        <span class="usage-hint">过去的时日</span>
+                    </div>
+                    <div class="synonym-tag">
+                        从前
+                        <span class="usage-hint">过去的时间或时候</span>
+                    </div>
+                    <div class="synonym-tag">
+                        往常
+                        <span class="usage-hint">指过去的日子</span>
+                    </div>
+                    <div class="synonym-tag">
+                        平时
+                        <span class="usage-hint">通常的时候</span>
+                    </div>
+                    <div class="synonym-tag">
+                        旧日
+                        <span class="usage-hint">过去的日子</span>
+                    </div>
+                    <div class="synonym-tag">
+                        过去
+                        <span class="usage-hint">以前的时间</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Detailed Comparison Section -->
+            <section>
+                <h2>词语辨析与用法</h2>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>词语</th>
+                            <th>核心含义</th>
+                            <th>适用场景</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>向来</strong></td>
+                            <td>表示一直如此，强调时间跨度长，往往带有一种一贯性或规律性。</td>
+                            <td>多用于书面语，强调习惯或态度的持续性。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>平素</strong></td>
+                            <td>指平时，通常情况。常用于形容人的行为、性格或生活状态。</td>
+                            <td>多用于正式场合，形容人的作风或习惯。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>往日</strong></td>
+                            <td>指过去的日子，侧重于回忆，常与“今天”形成对比。</td>
+                            <td>用于表达对过去美好时光的怀念或对过去错误的反思。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>平时</strong></td>
+                            <td>指平常的时候，与“非常时期”相对，强调常态。</td>
+                            <td>用于描述日常生活中的状态，如“平时很安静”。</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Usage Examples Section -->
+            <section>
+                <h2>应用示例</h2>
+                <div class="usage-examples">
+                    <p><strong>1. 与“向来”搭配：</strong> 他<span>向来</span>做事认真，从不马虎。</p>
+                    <p><strong>2. 与“往日”搭配：</strong> 如今的繁华景象，与<span>往日</span>的荒凉截然不同。</p>
+                    <p><strong>3. 与“平素”搭配：</strong> 他平素不喜张扬，因此很少在公共场合发表意见。</p>
+                    <p><strong>4. 与“往常”搭配：</strong> 虽然下雨，但他还是像<span>往常</span>一样准时到了公司。</p>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Sidebar -->
+        <aside>
+            <div class="widget">
+                <h3>快速导航</h3>
+                <ul class="category-list">
+                    <li><a href="#">过去时间类</a></li>
+                    <li><a href="#">行为习惯类</a></li>
+                    <li><a href="#">日常生活类</a></li>
+                    <li><a href="#">文学表达类</a></li>
+                </ul>
+            </div>
+
+            <div class="widget">
+                <h3>相关词汇</h3>
+                <ul class="category-list">
+                    <li><a href="#">过去</a></li>
+                    <li><a href="#">以前</a></li>
+                    <li><a href="#">曾经</a></li>
+                    <li><a href="#">旧时</a></li>
+                    <li><a href="#">昔日</a></li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 词语通 - 同义词查询与语言学习平台</p>
+        <p>本站提供各类词语近义词、反义词及用法解析，仅供学习参考。</p>
+    </footer>
+
+</body>
+</html>
