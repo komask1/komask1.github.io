@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="花都汽车网提供花都地区最新汽车资讯、新车评测、二手车交易、汽车维修保养及本地汽车团购优惠信息。专注服务花都车主，打造一站式汽车生活服务平台。">
+    <meta name="keywords" content="花都汽车, 花都二手车, 花都新车, 广州花都汽车报价, 花都汽车团购, 花都汽车维修">
+    <title>花都汽车-花都本地新车资讯、二手车交易与汽车服务指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d32f2f; /* 汽车红，强调紧迫感与活力 */
+            --primary-hover: #b71c1c;
+            --secondary-color: #2c3e50; /* 深蓝灰，专业稳重 */
+            --bg-light: #f4f6f8;
+            --text-main: #333333;
+            --text-sub: #666666;
+            --border-color: #e0e0e0;
+            --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 顶部导航 */
+        .top-bar {
+            background-color: var(--secondary-color);
+            color: #fff;
+            font-size: 13px;
+            padding: 8px 0;
+        }
+
+        .top-bar .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .top-links a {
+            color: #ccc;
+            margin-left: 15px;
+        }
+
+        .top-links a:hover {
+            color: #fff;
+        }
+
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-main {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: -1px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+            margin-left: 5px;
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+        .search-box {
+            display: flex;
+            flex: 1;
+            max-width: 500px;
+            margin: 0 40px;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 2px solid var(--border-color);
+            border-radius: 4px 0 0 4px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .search-box input:focus {
+            border-color: var(--primary-color);
+        }
+
+        .search-box button {
+            padding: 0 25px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        /* 导航菜单 */
+        .main-nav {
+            background-color: var(--secondary-color);
+        }
+
+        .nav-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-list {
+            display: flex;
+        }
+
+        .nav-item a {
+            display: block;
+            padding: 15px 20px;
+            color: #fff;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-item a:hover, .nav-item a.active {
+            background-color: var(--primary-color);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            height: 400px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/seed/carhero/1600/600') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero-content h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 12px 35px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        /* 通用布局 */
+        .container {
+            max-width: var(--container-width);
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            color: var(--secondary-color);
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 24px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .more-link {
+            color: var(--text-sub);
+            font-size: 14px;
+        }
+
+        .more-link:hover {
+            color: var(--primary-color);
+        }
+
+        /* 车型推荐卡片 */
+        .car-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .car-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .car-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .car-image {
+            height: 200px;
+            background-color: #eee;
+            position: relative;
+        }
+
+        .car-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .car-tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 4px 8px;
+            font-size: 12px;
+            border-radius: 4px;
+        }
+
+        .car-info {
+            padding: 20px;
+        }
+
+        .car-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .car-meta {
+            font-size: 13px;
+            color: var(--text-sub);
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .car-price {
+            font-size: 20px;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .car-price small {
+            font-size: 12px;
+            color: var(--text-sub);
+            font-weight: normal;
+        }
+
+        /* 二手车专区 */
+        .used-car-section {
+            background-color: #fff;
+            padding: 40px 20px;
+        }
+
+        .dealer-list {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+
+        .dealer-card {
+            min-width: 200px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .dealer-logo {
+            width: 60px;
+            height: 60px;
+            background-color: #eee;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            overflow: hidden;
+        }
+
+        .dealer-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .dealer-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .dealer-loc {
+            font-size: 12px;
+            color: var(--text-sub);
+        }
+
+        /* 服务与资讯 */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .service-item {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .service-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .service-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .service-desc {
+            font-size: 13px;
+            color: var(--text-sub);
+        }
+
+        /* 底部 */
+        footer {
+            background-color: var(--secondary-color);
+            color: #ccc;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col p {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .top-bar { display: none; }
+            .header-main { flex-direction: column; gap: 15px; }
+            .search-box { width: 100%; margin: 0; }
+            .nav-list { flex-wrap: wrap; }
+            .nav-item a { padding: 10px 10px; font-size: 13px; }
+            .hero { height: 250px; }
+            .hero-content h1 { font-size: 28px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+            .service-grid { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部信息条 -->
+    <div class="top-bar">
+        <div class="container">
+            <span>欢迎来到花都汽车网，专注服务花都及周边地区车主</span>
+            <div class="top-links">
+                <a href="#">设为首页</a>
+                <a href="#">收藏本站</a>
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 头部 -->
+    <header>
+        <div class="header-main">
+            <a href="#" class="logo">
+                花都汽车 <span>Auto Fuhu</span>
+            </a>
+            <div class="search-box">
+                <input type="text" placeholder="搜索车型、价格、经销商...">
+                <button>搜索</button>
+            </div>
+            <div class="header-actions">
+                <a href="#" class="btn-outline">发布卖车</a>
+                <a href="#" class="btn-outline">联系客服</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 导航 -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#" class="active">首页</a></li>
+                <li class="nav-item"><a href="#">新车资讯</a></li>
+                <li class="nav-item"><a href="#">二手车</a></li>
+                <li class="nav-item"><a href="#">汽车团购</a></li>
+                <li class="nav-item"><a href="#">4S店大全</a></li>
+                <li class="nav-item"><a href="#">汽车美容</a></li>
+                <li class="nav-item"><a href="#">违章查询</a></li>
+                <li class="nav-item"><a href="#">汽车论坛</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>发现您的理想座驾</h1>
+            <p>花都本地最新车源、最优惠价格、最专业的购车服务</p>
+            <a href="#" class="btn-primary">立即预约试驾</a>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- 热门新车 -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">热门新车推荐</h2>
+                <a href="#" class="more-link">查看更多 &gt;</a>
+            </div>
+            <div class="car-grid">
+                <!-- 卡片 1 -->
+                <article class="car-card">
+                    <div class="car-image">
+                        <span class="car-tag">热销</span>
+                        <img src="https://picsum.photos/seed/car1/400/300" alt="新款轿车">
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-title">2024款 智行轿车 1.5T 自动豪华型</h3>
+                        <div class="car-meta">
+                            <span>厂商指导价：12.98万</span>
+                        </div>
+                        <div class="car-price">12.98万 <small>起</small></div>
+                    </div>
+                </article>
+                <!-- 卡片 2 -->
+                <article class="car-card">
+                    <div class="car-image">
+                        <span class="car-tag">新能源</span>
+                        <img src="https://picsum.photos/seed/car2/400/300" alt="SUV车型">
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-title">极光纯电SUV 长续航版</h3>
+                        <div class="car-meta">
+                            <span>厂商指导价：25.88万</span>
+                        </div>
+                        <div class="car-price">24.99万 <small>起</small></div>
+                    </div>
+                </article>
+                <!-- 卡片 3 -->
+                <article class="car-card">
+                    <div class="car-image">
+                        <img src="https://picsum.photos/seed/car3/400/300" alt="MPV车型">
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-title">商务之星 MPV 2.0T 尊贵版</h3>
+                        <div class="car-meta">
+                            <span>厂商指导价：18.60万</span>
+                        </div>
+                        <div class="car-price">17.88万 <small>起</small></div>
+                    </div>
+                </article>
+                <!-- 卡片 4 -->
+                <article class="car-card">
+                    <div class="car-image">
+                        <span class="car-tag">特价</span>
+                        <img src="https://picsum.photos/seed/car4/400/300" alt="运动轿车">
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-title">运动GT轿跑 2.0T 运动版</h3>
+                        <div class="car-meta">
+                            <span>厂商指导价：16.80万</span>
+                        </div>
+                        <div class="car-price">15.99万 <small>起</small></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 二手车专区 -->
+        <section class="used-car-section">
+            <div class="section-header">
+                <h2 class="section-title">花都精选二手车</h2>
+                <a href="#" class="more-link">查看全部车源 &gt;</a>
+            </div>
+            <div class="car-grid">
+                <article class="car-card">
+                    <div class="car-image">
+                        <img src="https://picsum.photos/seed/used1/400/300" alt="2018年宝马">
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-title">2018款 宝马3系 320Li 运动套装</h3>
+                        <div class="car-meta">
+                            <span>2018年上牌 | 4.8万公里</span>
+                        </div>
+                        <div class="car-price">24.5万</div>
+                    </div>
+                </article>
+                <article class="car-card">
+                    <div class="car-image">
+                        <img src="https://picsum.photos/seed/used2/400/300" alt="2019年奥迪">
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-title">2019款 奥迪A4L 40TFSI 时尚型</h3>
+                        <div class="car-meta">
+                            <span>2019年上牌 | 3.5万公里</span>
+                        </div>
+                        <div class="car-price">21.8万</div>
+                    </div>
+                </article>
+                <article class="car-card">
+                    <div class="car-image">
+                        <img src="https://picsum.photos/seed/used3/400/300" alt="2020年奔驰">
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-title">2020款 奔驰C级 C260L 运动版</h3>
+                        <div class="car-meta">
+                            <span>2020年上牌 | 2.1万公里</span>
+                        </div>
+                        <div class="car-price">28.9万</div>
+                    </div>
+                </article>
+                <article class="car-card">
+                    <div class="car-image">
+                        <img src="https://picsum.photos/seed/used4/400/300" alt="2019年丰田">
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-title">2019款 丰田凯美瑞 2.5G 豪华版</h3>
+                        <div class="car-meta">
+                            <span>2019年上牌 | 5.2万公里</span>
+                        </div>
+                        <div class="car-price">16.5万</div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 4S店与经销商 -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">花都本地4S店</h2>
+                <a href="#" class="more-link">查看全部门店 &gt;</a>
+            </div>
+            <div class="dealer-list">
+                <div class="dealer-card">
+                    <div class="dealer-logo">
+                        <img src="https://picsum.photos/seed/d1/100/100" alt="logo">
+                    </div>
+                    <div class="dealer-name">花都广本4S店</div>
+                    <div class="dealer-loc">地址：花都区迎宾大道88号</div>
+                </div>
+                <div class="dealer-card">
+                    <div class="dealer-logo">
+                        <img src="https://picsum.photos/seed/d2/100/100" alt="logo">
+                    </div>
+                    <div class="dealer-name">花都大众服务中心</div>
+                    <div class="dealer-loc">地址：花都区新华镇镜湖大道</div>
+                </div>
+                <div class="dealer-card">
+                    <div class="dealer-logo">
+                        <img src="https://picsum.photos/seed/d3/100/100" alt="logo">
+                    </div>
+                    <div class="dealer-name">花都奔驰授权店</div>
+                    <div class="dealer-loc">地址：花都汽车城A区101</div>
+                </div>
+                <div class="dealer-card">
+                    <div class="dealer-logo">
+                        <img src="https://picsum.photos/seed/d4/100/100" alt="logo">
+                    </div>
+                    <div class="dealer-name">花都东风日产</div>
+                    <div class="dealer-loc">地址：花都区狮岭镇骏威路</div>
+                </div>
+                <div class="dealer-card">
+                    <div class="dealer-logo">
+                        <img src="https://picsum.photos/seed/d5/100/100" alt="logo">
+                    </div>
+                    <div class="dealer-name">花都特斯拉中心</div>
+                    <div class="dealer-loc">地址：花都汽车城B区</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 汽车服务与资讯 -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">汽车服务与资讯</h2>
+            </div>
+            <div class="service-grid">
+                <div class="service-item">
+                    <span class="service-icon">🔧</span>
+                    <h3 class="service-title">维修保养</h3>
+                    <p class="service-desc">正规资质技师团队，提供原厂配件与透明报价。</p>
+                </div>
+                <div class="service-item">
+                    <span class="service-icon">📝</span>
+                    <h3 class="service-title">违章代办</h3>
+                    <p class="service-desc">足不出户处理违章，支持全国异地违章查询。</p>
+                </div>
+                <div class="service-item">
+                    <span class="service-icon">🛡️</span>
+                    <h3 class="service-title">保险理赔</h3>
+                    <p class="service-desc">一站式保险购买与理赔服务，全程专人跟进。</p>
+                </div>
+                <div class="service-item">
+                    <span class="service-icon">💰</span>
+                    <h3 class="service-title">以旧换新</h3>
+                    <p class="service-desc">高回收价格评估，无缝衔接新车置换流程。</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 底部 -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>花都汽车网</h3>
+                <p>花都汽车网是花都地区领先的汽车垂直门户网站，致力于为当地车主提供最全面的新车资讯、二手车交易信息、汽车团购优惠以及专业的汽车维修保养服务。我们连接花都4S店与消费者，打造诚信、便捷的本地汽车生活服务平台。</p>
+            </div>
+            <div class="footer-col">
+                <h3>快速导航</h3>
+                <ul class="footer-links">
+                    <li><a href="#">新车中心</a></li>
+                    <li><a href="#">二手车市场</a></li>
+                    <li><a href="#">汽车团购</a></li>
+                    <li><a href="#">4S店大全</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>服务项目</h3>
+                <ul class="footer-links">
+                    <li><a href="#">汽车维修</a></li>
+                    <li><a href="#">保险代理</a></li>
+                    <li><a href="#">违章查询</a></li>
+                    <li><a href="#">车贷计算</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>联系我们</h3>
+                <ul class="footer-links">
+                    <li>电话：020-8888 6666</li>
+                    <li>邮箱：service@huaduauto.com</li>
+                    <li>地址：广州市花都区迎宾大道</li>
+                    <li>工作时间：周一至周日 9:00-21:00</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 花都汽车网 版权所有 | ICP备案号：粤ICP备XXXXXXXX号</p>
+        </div>
+    </footer>
+
+</body>
+  </html>
