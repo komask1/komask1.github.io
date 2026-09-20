@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="騳骉 - 汉字趣味百科与视觉探索平台。深入解析'騳'与'骉'的起源、字义演变及在成语中的应用，提供汉字构造美学展示与学习指南。">
+    <meta name="keywords" content="騳骉, 汉字, 汉字解析, 多字词, 汉字构造, 成语大全">
+    <title>騳骉 - 汉字趣味解析与视觉探索</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #c0392b;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-radius: 12px;
+            --spacing-unit: 1rem;
+            --max-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            font-size: 2rem;
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #a93226;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 4rem 1.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .hero-char-display {
+            font-size: 6rem;
+            font-weight: 900;
+            margin: 1rem 0;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            padding: 1rem 2rem;
+            border-radius: var(--border-radius);
+            backdrop-filter: blur(5px);
+        }
+
+        /* Main Layout */
+        main {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #e1e1e1;
+            padding-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -1.1rem;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .section-link {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .section-link:hover {
+            color: var(--accent-color);
+        }
+
+        /* Grid Layouts */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #f0f3f5;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: #999;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Visual Breakdown */
+        .visual-breakdown {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+
+        .char-box {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 1.5rem;
+            border: 1px dashed #ccc;
+            border-radius: var(--border-radius);
+        }
+
+        .char-box .char {
+            font-size: 4rem;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .char-box .label {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .arrow-divider {
+            display: flex;
+            align-items: center;
+            font-size: 2rem;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* List Style */
+        .term-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .term-item {
+            background: white;
+            padding: 1.2rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        .term-item:hover {
+            background-color: #fff5f5;
+        }
+
+        .term-item strong {
+            font-size: 1.1rem;
+        }
+
+        .term-item span {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .faq-question {
+            padding: 1.2rem;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .faq-question:hover {
+            background-color: #f8f9fa;
+        }
+
+        .faq-answer {
+            padding: 0 1.2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            color: var(--text-light);
+            background-color: #fafafa;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 1.2rem;
+            max-height: 200px;
+            border-top: 1px solid #eee;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: #ecf0f1;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                height: auto;
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                margin: 1rem 0;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-char-display {
+                font-size: 4rem;
+            }
+
+            .visual-breakdown {
+                flex-direction: column;
+            }
+
+            .arrow-divider {
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <span>騳</span> 騳骉
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#origin" class="active">字源解析</a></li>
+                    <li><a href="#composition">结构拆解</a></li>
+                    <li><a href="#usage">成语与应用</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#usage" class="cta-button">开始探索</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>探索汉字的动态之美</h1>
+            <div class="hero-char-display">騳骉</div>
+            <p>深入解析两个极具画面感的汉字。一个代表双马奔腾的狂野，一个描绘群马疾驰的壮阔，感受汉字构造中的动态美学。</p>
+        </div>
+    </section>
+
+    <main>
+        <!-- 字源解析 -->
+        <section id="origin">
+            <div class="section-header">
+                <h2 class="section-title">字源解析</h2>
+                <a href="#" class="section-link">查看更多汉字百科 &rarr;</a>
+            </div>
+            
+            <div class="visual-breakdown">
+                <div class="char-box">
+                    <span class="char">騳</span>
+                    <span class="label">字义：双马奔腾</span>
+                </div>
+                <div class="arrow-divider">&rarr;</div>
+                <div class="char-box">
+                    <span class="char">骉</span>
+                    <span class="label">字义：众马齐奔</span>
+                </div>
+            </div>
+
+            <article style="margin-top: 2rem; background: white; padding: 2rem; border-radius: 12px; border-left: 5px solid var(--primary-color);">
+                <h3>汉字背后的故事</h3>
+                <p style="margin-top: 1rem; color: var(--text-light);">
+                    汉字是记录语言的符号，也是独特的视觉艺术。在汉字的演变长河中，"象形"是其最原始的造字方法。对于"騳"和"骉"这类字，古人通过观察自然界的现象，将其抽象为文字。
+                </p>
+                <p style="margin-top: 1rem; color: var(--text-light);">
+                    <strong>騳</strong>，读音为dú，由两个"马"字上下堆叠而成。在古代，马不仅是交通工具，更是战争与力量的重要象征。两个马字叠加，形象地表达了"两匹马并驾齐驱"或"马匹快速奔跑"的动态画面，常用来形容速度极快或竞争激烈的场景。
+                </p>
+                <p style="margin-top: 1rem; color: var(--text-light);">
+                    <strong>骉</strong>，读音为biāo，由三个"马"字并列组成。如果说"騳"是双人组合，那么"骉"就是三人行。它描绘了"许多匹马奔跑"的壮丽景象，充满了蓬勃的生命力和动态的张力。在古代文学中，这类多字组合的字往往用来渲染气氛，表达宏大或激烈的情感。
+                </p>
+            </article>
+        </section>
+
+        <!-- 结构拆解 -->
+        <section id="composition">
+            <div class="section-header">
+                <h2 class="section-title">结构拆解</h2>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon">🐴</div>
+                    <h3>马 (Mǎ)</h3>
+                    <p>象形字。甲骨文中的"马"字像一匹长鬃马的形象。作为部首，"马"字旁的字大多与动物、奔跑、速度或军事相关。</p>
+                    <div class="card-meta">部首：马 | 笔画：10</div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⬆️</div>
+                    <h3>上下结构 (騳)</h3>
+                    <p>在"騳"字中，两个"马"字上下排列，强调了"并"的概念。这种结构常用于表示两个事物的重叠或同时发生。</p>
+                    <div class="card-meta">总笔画：32 | 读音：dú</div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⬅️</div>
+                    <h3>左右结构 (骉)</h3>
+                    <p>在"骉"字中，三个"马"字横向排列，展现了"众"的概念。这种结构生动地刻画了群体行进的动态。</p>
+                    <div class="card-meta">总笔画：24 | 读音：biāo</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 成语与应用 -->
+        <section id="usage">
+            <div class="section-header">
+                <h2 class="section-title">成语与应用</h2>
+            </div>
+            <div class="term-list">
+                <div class="term-item">
+                    <div>
+                        <strong>騳骉 (Dú Biāo)</strong>
+                        <span style="display:block; font-size:0.9rem; color:#666; margin-top:4px;">本义指马跑得很快的样子。在古籍中，常用来形容车马疾驰的壮观景象或速度极快。</span>
+                    </div>
+                    <span>📖 古籍引用</span>
+                </div>
+                <div class="term-item">
+                    <div>
+                        <strong>骉骉 (Biāo Biāo)</strong>
+                        <span style="display:block; font-size:0.9rem; color:#666; margin-top:4px;">形容马群奔跑的声音或样子。如《说文解字》注："骉，众马也。骉骉，马行疾貌。"</span>
+                    </div>
+                    <span>🔊 声音描绘</span>
+                </div>
+                <div class="term-item">
+                    <div>
+                        <strong>万马奔腾 (Wàn Mǎ Bēn Téng)</strong>
+                        <span style="display:block; font-size:0.9rem; color:#666; margin-top:4px;">虽然不是直接使用"騳"或"骉"，但这是最接近"骉"字本义的现代成语，形容群体动作迅猛有力。</span>
+                    </div>
+                    <span>🚀 现代应用</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见问题 -->
+        <section id="faq">
+            <div class="section-header">
+                <h2 class="section-title">常见问题 (FAQ)</h2>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    騳和骉是什么意思？
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>騳</strong>（dú）指两匹马并驾齐驱或快速奔跑。<strong>骉</strong>（biāo）指许多匹马奔跑。这两个字都生动地描绘了马匹的动态。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    这两个字在现代汉语中常用吗？
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>在现代日常交流中，这两个字使用频率较低，属于生僻字。它们更多出现在古籍文献、书法作品或特定的汉字文化科普内容中。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    如何快速记住这两个字？
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>通过视觉联想记忆：<strong>騳</strong>是"双马"，可以想象两匹马叠在一起跑；<strong>骉</strong>是"众马"，可以想象三匹马并排跑。记住"双"和"众"的区别即可。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="logo" style="margin-bottom: 1rem; color: white;">
+                    <span style="font-size: 1.2rem;">騳骉</span> 汉字探索
+                </div>
+                <p style="color: #bdc3c7; font-size: 0.9rem;">
+                    致力于汉字文化的传承与普及，通过现代视角解读古老文字的魅力。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#origin">字源解析</a></li>
+                    <li><a href="#composition">结构拆解</a></li>
+                    <li><a href="#usage">成语应用</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <ul>
+                    <li><a href="#">汉字百科</a></li>
+                    <li><a href="#">书法展示</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 騳骉汉字探索平台. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        // 简单的 FAQ 交互逻辑
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('active');
+                });
+            });
+
+            // 简单的导航高亮逻辑
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav ul li a');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 100) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
