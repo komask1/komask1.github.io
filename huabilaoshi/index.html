@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花臂老师-硬核健身教学与身体改造指南</title>
+    <meta name="description" content="花臂老师官方网站，提供硬核健身教学、增肌减脂计划、身体改造建议及运动损伤康复指南。适合追求力量美学与身材管理的健身爱好者。">
+    <meta name="keywords" content="花臂老师, 健身教学, 增肌, 减脂, 肌肉训练, 运动康复">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --secondary-color: #ecf0f1;
+            --text-dark: #333;
+            --text-light: #666;
+            --bg-light: #f8f9fa;
+            --card-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .cta-btn {
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .cta-btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn-outline {
+            border: 2px solid #fff;
+            color: #fff;
+            padding: 10px 30px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .btn-outline:hover {
+            background-color: #fff;
+            color: var(--primary-color);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 30px;
+            border-radius: 8px;
+            background: var(--bg-light);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--card-shadow);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        /* Training Plans */
+        .plans {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+        }
+
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .plan-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+        }
+
+        .plan-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .plan-image {
+            height: 200px;
+            background-color: #ddd;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .plan-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .plan-content {
+            padding: 25px;
+        }
+
+        .plan-content h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .plan-content p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .plan-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Common Mistakes */
+        .mistakes {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+
+        .mistakes-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .mistakes-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .mistakes-list li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .check-icon {
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: -3px;
+        }
+
+        .mistakes-image {
+            flex: 1;
+            min-width: 300px;
+            height: 400px;
+            background-color: #eee;
+            border-radius: 10px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+        }
+
+        .faq-item {
+            background: #fff;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .faq-question:hover {
+            background-color: #fafafa;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-light);
+            display: none;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+            transition: var(--transition);
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>💪</span> 花臂老师
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">首页</a></li>
+                    <li><a href="#plans">训练计划</a></li>
+                    <li><a href="#diet">饮食管理</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-btn">预约指导</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>硬核健身教学<br>重塑你的身体线条</h1>
+                <p>无论你是想增肌塑形，还是突破运动瓶颈，花臂老师提供基于生物力学的高效训练方案。拒绝无效训练，用科学方法雕刻理想身材。</p>
+                <div class="hero-buttons">
+                    <a href="#plans" class="cta-btn">开始我的计划</a>
+                    <a href="#mistakes" class="btn-outline">查看避坑指南</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>为什么选择花臂老师</h2>
+                    <p>专注于力量美学与科学训练的深度融合</p>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🦴</div>
+                        <h3>生物力学分析</h3>
+                        <p>深入解析关节活动范围与发力模式，确保每个动作都精准有效，减少受伤风险。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>数据化反馈</h3>
+                        <p>通过体脂率、围度变化及力量测试数据，动态调整训练负荷，量化你的进步。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🥗</div>
+                        <h3>营养与代谢</h3>
+                        <p>不只是练，更要吃。提供针对性的增肌减脂食谱，帮助身体达到最佳合成状态。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Training Plans Section -->
+        <section id="plans" class="plans">
+            <div class="container">
+                <div class="section-title">
+                    <h2>精选训练计划</h2>
+                    <p>针对不同目标人群定制的进阶方案</p>
+                </div>
+                <div class="plan-grid">
+                    <!-- Plan 1 -->
+                    <article class="plan-card">
+                        <div class="plan-image" style="background-image: url('https://picsum.photos/seed/gym1/600/400');">
+                            <span class="plan-tag">进阶</span>
+                        </div>
+                        <div class="plan-content">
+                            <h3>力量增肌计划</h3>
+                            <p>适合有一定基础，希望增加肌肉围度的人群。重点强化大肌群，采用复合动作为主，每周4次高强度训练。</p>
+                            <div class="plan-meta">
+                                <span>⏱️ 90分钟/次</span>
+                                <span>🔥 消耗 600卡</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Plan 2 -->
+                    <article class="plan-card">
+                        <div class="plan-image" style="background-image: url('https://picsum.photos/seed/gym2/600/400');">
+                            <span class="plan-tag">减脂</span>
+                        </div>
+                        <div class="plan-content">
+                            <h3>全身燃脂塑形</h3>
+                            <p>适合减脂人群。结合有氧与抗阻训练，提高基础代谢率，在减脂的同时保持肌肉线条，避免皮肤松弛。</p>
+                            <div class="plan-meta">
+                                <span>⏱️ 60分钟/次</span>
+                                <span>🔥 消耗 500卡</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Plan 3 -->
+                    <article class="plan-card">
+                        <div class="plan-image" style="background-image: url('https://picsum.photos/seed/gym3/600/400');">
+                            <span class="plan-tag">康复</span>
+                        </div>
+                        <div class="plan-content">
+                            <h3>运动损伤修复</h3>
+                            <p>针对肩颈劳损、腰肌劳损等常见问题，通过激活薄弱肌群和纠正不良体态，恢复身体机能。</p>
+                            <div class="plan-meta">
+                                <span>⏱️ 45分钟/次</span>
+                                <span>🧘‍♂️ 柔韧性提升</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Common Mistakes Section -->
+        <section id="mistakes" class="mistakes">
+            <div class="container">
+                <div class="mistakes-container">
+                    <div class="mistakes-image" style="background-image: url('https://picsum.photos/seed/fitness/600/800');"></div>
+                    <div class="mistakes-content">
+                        <div class="section-title" style="text-align: left;">
+                            <h2>新手常见误区</h2>
+                            <p>90%的健身失败都源于这些细节</p>
+                        </div>
+                        <ul class="mistakes-list">
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <div>
+                                    <h4>过度追求大重量</h4>
+                                    <p style="font-size: 0.9rem; color: #666;">忽视动作标准度，使用借力方式增加重量，极易导致腰椎和关节损伤。</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <div>
+                                    <h4>只练不练腿</h4>
+                                    <p style="font-size: 0.9rem; color: #666;">腿部是人体最大的肌群，忽视腿部训练会导致激素分泌减少，影响全身增肌效果。</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <div>
+                                    <h4>忽视热身与拉伸</h4>
+                                    <p style="font-size: 0.9rem; color: #666;">肌肉在低温状态下缺乏弹性，直接高强度训练会大幅增加撕裂风险。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问题解答</h2>
+                    <p>关于健身训练、饮食搭配的疑问</p>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">每天锻炼多久比较合适？</div>
+                        <div class="faq-answer">
+                            对于大多数初学者和中级训练者，每周3-5次，每次45-90分钟的训练是比较科学的频率。过度的训练会导致恢复不足，反而影响肌肉生长。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">练肌肉会影响长高吗？</div>
+                        <div class="faq-answer">
+                            适当的负重训练不会影响身高，反而有助于骨骼健康。但青少年在骨骺线闭合前应避免过大的负重，并在专业指导下进行。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">不吃晚饭能减肥吗？</div>
+                        <div class="faq-answer">
+                            单纯不吃晚饭可能导致下一顿暴饮暴食，且容易引发低血糖。关键是控制全天总热量摄入，并保证蛋白质的充足摄入。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="hero" style="background: var(--primary-color); padding: 60px 0;">
+            <div class="container">
+                <h2 style="margin-bottom: 15px;">准备好改变了吗？</h2>
+                <p style="margin-bottom: 30px; opacity: 0.9;">加入我们的健身社群，获取专属训练计划与饮食指导。</p>
+                <a href="#contact" class="cta-btn" style="background-color: #fff; color: var(--primary-color);">立即联系咨询</a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于花臂老师</h4>
+                    <p style="color: #bdc3c7; font-size: 0.9rem;">
+                        致力于普及科学健身知识，帮助更多人通过自律获得健康与力量。我们相信，身体是革命的本钱。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#home">回到首页</a></li>
+                        <li><a href="#plans">训练计划</a></li>
+                        <li><a href="#faq">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>📍 健身工作室：上海市静安区健身路88号</li>
+                        <li>📧 邮箱：contact@huabi.com</li>
+                        <li>📱 电话：021-12345678</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 花臂老师健身教学网. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
