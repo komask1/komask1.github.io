@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>滚床单 - 成人健康指南与情趣生活科普</title>
+    <meta name="description" content="滚床单 - 提供科学的亲密关系维护建议、情趣用品选购指南及健康生活方式的科普平台。拒绝低俗，专注两性健康与情感交流。">
+    <meta name="keywords" content="滚床单,两性关系,情趣用品,亲密关系,健康生活">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d63384;
+            --primary-hover: #b02a6b;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #2c3e50;
+            --text-sub: #6c757d;
+            --border-radius: 12px;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--primary-hover);
+            color: white;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-sub);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        /* 核心内容区 */
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        /* 卡片样式 */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .card-img-placeholder {
+            height: 180px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 3rem;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tag {
+            font-size: 0.75rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .card-text {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .card-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        /* 情趣用品分类 */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .category-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            cursor: pointer;
+            border: 1px solid #eee;
+            transition: all 0.2s;
+        }
+
+        .category-item:hover {
+            border-color: var(--primary-color);
+            background-color: #fff0f6;
+        }
+
+        .category-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .category-name {
+            font-weight: 600;
+        }
+
+        /* 常见问题 */
+        .faq-section {
+            background-color: white;
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 4rem;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 1.5rem 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            color: var(--text-sub);
+            padding-left: 1.5rem;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 3rem 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .disclaimer {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+            color: #95a5a6;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .categories-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            nav ul {
+                display: none; /* 简化移动端展示 */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span>❤️</span> 滚床单
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">健康科普</a></li>
+                    <li><a href="#">选购指南</a></li>
+                    <li><a href="#">情感咨询</a></li>
+                    <li><a href="#">品牌入驻</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="cta-btn">开始探索</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>探索亲密关系的真谛</h1>
+                <p>我们致力于提供科学、健康、愉悦的亲密关系维护指南。拒绝低俗，专注提升生活品质与情感连接。</p>
+                <div style="display: flex; gap: 1rem; justify-content: center;">
+                    <a href="#guide" class="cta-btn" style="padding: 0.8rem 2rem; font-size: 1rem;">阅读健康指南</a>
+                    <a href="#products" class="cta-btn" style="background-color: white; color: var(--primary-color); padding: 0.8rem 2rem; font-size: 1rem; border: 1px solid var(--primary-color);">精选推荐</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- 分类导航 -->
+            <section id="products">
+                <h2 class="section-title">探索类别</h2>
+                <div class="categories-grid">
+                    <div class="category-item">
+                        <span class="category-icon">🛀</span>
+                        <div class="category-name">情趣内衣</div>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-icon">🕯️</span>
+                        <div class="category-name">香氛蜡烛</div>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-icon">🧴</span>
+                        <div class="category-name">润滑剂</div>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-icon">🧠</span>
+                        <div class="category-name">互动玩具</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 热门文章 -->
+            <section id="guide">
+                <h2 class="section-title">热门科普与指南</h2>
+                <div class="grid-layout">
+                    <article class="card">
+                        <div class="card-img-placeholder" style="background: #fce7f3;">🛏️</div>
+                        <div class="card-body">
+                            <span class="card-tag">情感关系</span>
+                            <h3 class="card-title">如何开启卧室里的深度对话？</h3>
+                            <p class="card-text">沟通是亲密关系的基础。学习如何在不尴尬的情况下表达需求，建立更深的情感连接。</p>
+                            <a href="#" class="card-link">阅读全文 &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-placeholder" style="background: #e0f2fe;">💧</div>
+                        <div class="card-body">
+                            <span class="card-tag">健康护理</span>
+                            <h3 class="card-title">正确使用润滑剂：安全与舒适指南</h3>
+                            <p class="card-text">了解不同类型润滑剂（水基、硅基、油基）的适用场景，确保每一次体验都安全无忧。</p>
+                            <a href="#" class="card-link">阅读全文 &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-placeholder" style="background: #f3e8ff;">🧖‍♀️</div>
+                        <div class="card-body">
+                            <span class="card-tag">生活方式</span>
+                            <h3 class="card-title">打造浪漫氛围：卧室改造入门</h3>
+                            <p class="card-text">灯光、音乐与香氛的结合，如何用低成本布置出一个让人放松且充满激情的私密空间。</p>
+                            <a href="#" class="card-link">阅读全文 &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-placeholder" style="background: #fee2e2;">🔒</div>
+                        <div class="card-body">
+                            <span class="card-tag">安全提示</span>
+                            <h3 class="card-title">卫生与清洁：维护健康的必要步骤</h3>
+                            <p class="card-text">保持私处清洁、定期更换寝具以及正确的玩具保养方法，预防细菌滋生，保障健康。</p>
+                            <a href="#" class="card-link">阅读全文 &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 常见问题 FAQ -->
+            <section class="faq-section">
+                <h2 class="section-title">常见问题解答</h2>
+                
+                <div class="faq-item active" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        滚床单会影响身体健康吗？
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        适度的亲密行为对身心健康有益，有助于释放压力、促进激素分泌和增进伴侣感情。关键在于卫生、适度以及双方的舒适度。
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        如何挑选合适的情趣用品？
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        首先考虑安全性，选择正规品牌。其次根据个人喜好和身体状况选择类型。初次尝试建议从简单、安全的产品开始，并做好清洁准备。
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        润滑剂可以和避孕套一起用吗？
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        可以。大多数水基润滑剂与避孕套兼容，可以增加顺滑度并减少破损风险。但请避免使用硅基润滑剂配合硅基避孕套，以免损坏产品。
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于滚床单</h4>
+                    <p style="color: #bdc3c7; font-size: 0.9rem;">我们是一个专注于两性健康、情感咨询与生活方式科普的平台。倡导健康、科学、尊重的亲密关系。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>探索栏目</h4>
+                    <ul>
+                        <li><a href="#">情感升温技巧</a></li>
+                        <li><a href="#">好物选购评测</a></li>
+                        <li><a href="#">健康卫生知识</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>客户服务</h4>
+                    <ul>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">配送说明</a></li>
+                        <li><a href="#">售后保障</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="disclaimer">
+                <p>⚠️ 18+ 内容提示：本网站包含成人向内容建议与产品信息，仅面向18岁及以上成年用户访问。请确保在法律允许的区域内浏览。</p>
+                <p style="margin-top: 0.5rem;">&copy; 2023 滚床单健康科普平台. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的 FAQ 交互逻辑
+        function toggleFaq(element) {
+            // 关闭其他打开的项
+            const allItems = document.querySelectorAll('.faq-item');
+            allItems.forEach(item => {
+                if (item !== element) {
+                    item.classList.remove('active');
+                }
+            });
+            // 切换当前项
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
